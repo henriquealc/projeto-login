@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
     <main>
@@ -14,8 +15,21 @@
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                <form action="login.php" method="post">
-                    
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <input type="email" name="usu" id="ilogin" required placeholder=" Seu e-mail">
+                        <label for="ilogin">E-mail:</label>
+                    </div>
+                    <div class="campo">
+                        <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" placeholder=" Sua senha" autocomplete="current-password">
+                        <label for="isen">Senha:</label>
+                        <!--CONTINUA A PARTIR DE ADICIONAR O ICONE NO E-MAIL
+                        MINUTO DO VIDEO 6:24-->
+                    </div>
+                    <p>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </p>
                 </form>
             </div>
         </section>
