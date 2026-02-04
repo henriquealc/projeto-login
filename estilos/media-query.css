@@ -21,7 +21,7 @@ Grandes telas: acima de 1200px
         height: 280px;                /* Altura do card */
     }
 
-    section#login > div#imagem{       
+    section#login > div#imagem{
         float: left;                  /* Alinha à esquerda */
         width: 30%;                   /* Ocupa 30% do card */
         height: 100%;                 /* Altura total do card */
