@@ -1,121 +1,167 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* Define o padrão de codificação para aceitar acentos */
 
-/*
-PALETA DE CORES:
-PRETO: #191013
-BRANCO: #f4f4f2
-CINZA: #556270
-*/
+/* Comentário informativo com a paleta de cores usada no projeto */
+ /*
+ PALETA DE CORES:
+ PRETO: #191013
+ BRANCO: #f4f4f2
+ CINZA: #556270
+ */
 
+/* Seletor universal: aplica a todos os elementos */
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+    margin: 0px; /* Remove margens padrão do navegador */
+    padding: 0px; /* Remove espaçamentos internos padrão */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
 }
 
+/* Aplica ao body e ao html */
 body, html {
-    height: 100vh;
-    width: 100vw;
-    background-color: #393A3F;
+    height: 100vh; /* Altura total da tela */
+    width: 100vw; /* Largura total da tela */
+    background-color: #393A3F; /* Cor de fundo da página */
 }
- 
 
+/* Elemento principal da página */
 main{
-    position: relative;
-    height: 100vh;
-    width: 100wh;
+    position: relative; /* Permite posicionar elementos filhos com absolute */
+    height: 100vh; /* Altura total da tela */
+    width: 100wh; /* Largura (OBS: o correto seria 100vw) */
 }
 
+/* Seção de login */
 section#login {
-    /*Coloca o login no meio da tela para mobile*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden; /*Esconde as pontas da parte de cima da foto */
+    position: absolute; /* Permite centralização com top/left */
+    top: 50%; /* Move 50% para baixo */
+    left: 50%; /* Move 50% para a direita */
+    overflow: hidden; /* Esconde partes que ultrapassem o container */
 
-    background-color: white;
-    width: 250px;
-    height: 515px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+    background-color: white; /* Cor de fundo do card */
+    width: 250px; /* Largura do card */
+    height: 515px; /* Altura do card */
+    border-radius: 20px; /* Arredondamento das bordas */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450); /* Sombra */
 
-    transition: width 0.3s, height 0.3s;
-    transition-timing-function: ease;
+    transform: translate(-50%, -50%); /* Centraliza exatamente */
+    transition: width 0.3s, height 0.3s; /* Anima mudança de tamanho */
+    transition-timing-function: ease; /* Suaviza a animação */
 }
 
+/* Div da imagem */
 section#login > div#imagem{
-    display: block;
-    background: black url(..//imagens/pexels-pavel-danilyuk-8294594.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 200px;
+    display: block; /* Faz a div se comportar como bloco */
+    background: black url(..//imagens/pexels-pavel-danilyuk-8294594.jpg) no-repeat; /* Imagem de fundo */
+    background-size: cover; /* Imagem cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    height: 200px; /* Altura da imagem */
 }
 
+/* Div do formulário */
 section#login > div#formulario {
-    display: block;
-    padding: 10px;
+    display: block; /* Mantém comportamento de bloco */
+    padding: 10px; /* Espaçamento interno */
 }
 
+/* Título do formulário */
 div#formulario > h1{
-    text-align: center;
-    margin-bottom: 10px;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 10px; /* Espaço abaixo do título */
 }
 
+/* Parágrafo explicativo */
 div#formulario > p{
-    font-size: 0.8em;
+    font-size: 0.8em; /* Tamanho menor do texto */
 }
 
+/* Container de cada campo */
 form > div.campo{
-    background-color: rgb(170, 170, 170);
-    display: block;
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    margin: 5px 0px;
+    background-color: rgb(170, 170, 170); /* Cor de fundo */
+    display: block; /* Comportamento em bloco */
+    width: 100%; /* Largura total */
+    height: 40px; /* Altura do campo */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin: 5px 0px; /* Espaçamento vertical */
+    border: 2px solid rgb(170, 170, 170); /* Borda */
 }
 
+/* Label escondido */
 div.campo > label{
-    display: none;
+    display: none; /* Não aparece visualmente */
 }
 
+/* Ícone do campo */
+div.campo > span{
+    color: black; /* Cor do ícone */
+    font-size: 2em; /* Tamanho do ícone */
+    width: 40px; /* Largura fixa */
+    padding: 5px; /* Espaçamento interno */
+}
+
+/* Placeholder do input */
+div.campo > input::placeholder{
+    color: black; /* Cor do texto de dica */
+}
+
+/* Campo de input */
+div.campo > input{
+    background-color: rgba(255, 0, 0, 0); /* Fundo do formulario do espaço emial e senha */
+    font-size: 1em; /* Tamanho da fonte */
+    width: calc(100% - 45px); /* Desconta o espaço do ícone */
+    height: 100%; /* Altura total do container */
+    border: 0px; /* Remove borda padrão */
+    border-radius: 8px; /* Arredonda bordas */
+    padding: 4px; /* Espaçamento interno */
+    transform: translateY(-14px); /* Ajusta posição vertical */
+}
+
+/* Quando o input está ativo */
+div.campo > input:focus-within{
+    background-color: rgba(255, 255, 255, 0.692); /* Fundo claro */
+    border: none; /* Remove borda */
+}
+
+/* Botão de enviar */
 form > input[type=submit] {
-    display: block;
-    font-size: 1em;
-    width: 100%;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.952);
-    color: white;
-    border: none;
-    border-radius: 5px;
+    display: block; /* Ocupa linha inteira */
+    font-size: 1em; /* Tamanho da fonte */
+    width: 100%; /* Largura total */
+    height: 40px; /* Altura */
+    background-color: rgba(0, 0, 0, 0.952); /* Cor do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
 }
 
+/* Hover do botão */
 form > input[type=submit]:hover{
-    cursor: pointer;
-    background-color: #2d2d31;
+    cursor: pointer; /* Cursor de mão */
+    background-color: #2d2d31; /* Cor ao passar o mouse */
 }
 
+/* Link estilizado como botão */
 form > a.botao{
-    display: block;
-    text-align: center;
-    font-size: 1em;
-    width: 100%;
-    height: 40px;
-    padding-top: 10px;
-    margin-top: 5px;
-    background-color: #ffffff;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    border: 1px solid black;
-    border-radius: 7px;
+    display: block; /* Comportamento em bloco */
+    text-align: center; /* Centraliza texto */
+    font-size: 1em; /* Tamanho da fonte */
+    width: 100%; /* Largura total */
+    height: 40px; /* Altura */
+    padding-top: 10px; /* Espaço interno superior */
+    margin-top: 5px; /* Espaço acima */
+    background-color: #ffffff; /* Fundo branco */
+    text-decoration: none; /* Remove sublinhado */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    border: 1px solid black; /* Borda */
+    border-radius: 7px; /* Bordas arredondadas */
 }
 
+/* Texto menor dentro do botão */
 form > a.botao > span{
-    font-size: 0.8em;
+    font-size: 0.8em; /* Reduz o tamanho da fonte */
 }
 
+/* Hover do botão-link */
 form > a.botao:hover {
-    background-color: rgb(170, 170, 170);
-    color: black;
+    background-color: rgb(170, 170, 170); /* Fundo cinza */
+    color: black; /* Cor do texto */
 }

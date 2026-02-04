@@ -1,56 +1,68 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* Define codificação para aceitar acentos */
 
-/**/
+/* 
+Pequenas telas: até 600px            
+Celular: de 600px até 728px          
+Tablet: 768px até 992px             
+Desktop: 992px até 1200px            
+Grandes telas: acima de 1200px 
+*/
 
 
-/*TABLET*/
-@media screen and (min-width: 768px) and (max-width:992px) {
-    body {
-        background-image: linear-gradient(to bottom, #0C1212, #292A2E, #434449);
+/*TABLET*/                            
+@media screen and (min-width: 768px) and (max-width:992px) { 
+    
+    body {                            
+        background-image: linear-gradient(to bottom, #0C1212, #292A2E, #434449)
     }
     
-    section#login {
-        width: 80vw;
+    section#login {                   
+        width: 80vw;                  /* Largura relativa à tela */
+        height: 280px;                /* Altura do card */
     }
 
-    section#login > div#imagem{
-        float: left;
-        width: 30%;
-        height: 100%;
+    section#login > div#imagem{       
+        float: left;                  /* Alinha à esquerda */
+        width: 30%;                   /* Ocupa 30% do card */
+        height: 100%;                 /* Altura total do card */
     }
 
-    section#login > div#formulario{
-        float: right;
-        width: 70%;
+    section#login > div#formulario{   
+        float: right;                 /* Alinha à direita */
+        width: 70%;                   /* Ocupa 70% do card */
     }
-}
+}     
 
 
-@media screen and (min-width: 992px) {
-    body {
-    background-image: linear-gradient(to bottom, #0C1212, #292A2E, #434449);
+/*DESKTOP*/                           
+@media screen and (min-width: 992px) { 
+    
+    body {                           
+    background-image: linear-gradient(to bottom, #0C1212,#292A2E, #434449);                        
     }
     
-    section#login {
-        width: 950px;
+    section#login {                   
+        width: 950px;                 /* Largura fixa */
+        height: 350px;                /* Altura fixa */
     }
 
-    section#login > div#imagem {
-        float: right;
-        width: 50%;
-        height: 100%;
+    section#login > div#imagem {      
+        float: right;                 /* Alinha à direita */
+        width: 50%;                   /* Metade do card */
+        height: 100%;                 /* Altura total */
     }
 
-    section#login > div#formulario {
-        float: left;
-        width: 50%;
+    section#login > div#formulario {  
+        float: left;                  /* Alinha à esquerda */
+        width: 50%;                   /* Metade do card */
     }
 
-    div#formulario > h1{
-        font-size: 2em;
+    div#formulario > h1{              /* Título do formulário */
+        font-size: 2em;               /* Fonte maior */
     }
 
-    div#formulario > p{
-    font-size: 1.2em;
+    div#formulario > p{               /* Parágrafo do formulário */
+    font-size: 1em;                   /* Fonte normal */
+    margin: 20px 0px;                 /* Espaçamento vertical */
     }
-}
+}                                     
